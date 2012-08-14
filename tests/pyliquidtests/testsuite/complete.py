@@ -17,4 +17,4 @@
 # import std
 # import third party
 # import local
-
+from pyliquidtests.patterns import PatternsTest
