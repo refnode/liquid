@@ -52,7 +52,10 @@ setup(
     # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
         "Development Status :: 1 - Planning",
+        "Environment :: Console",
+        "Environment :: Web Environment",
         "Intended Audience :: Developers",
+        "Intended Audience :: System Administrators",
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
