@@ -2,6 +2,7 @@ pyliquid
 ========
 
 Reimplementation of the ruby liquid template lib.
+For the ruby version of liquid template visit https://github.com/Shopify/liquid
 
 Quickstart
 ----------
