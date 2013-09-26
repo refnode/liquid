@@ -1,4 +1,4 @@
-# Copyright 2012, refnode
+# Copyright 2011, refnode http://refnode.com
 # All Rights Reserved
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,4 +19,3 @@ try:
 except ImportError:
     from pkgutil import extend_path
     __path__ = extend_path(__path__, __name__)
-

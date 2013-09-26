@@ -1,4 +1,4 @@
-# Copyright 2012, refnode
+# Copyright 2012, refnode http://refnode.com
 # All Rights Reserved
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,9 +14,7 @@
 # limitations under the License.
 
 
-try:
-    __import__('pkg_resources').declare_namespace(__name__)
-except ImportError:
-    from pkgutil import extend_path
-    __path__ = extend_path(__path__, __name__)
-
+# import std
+# import third party
+# import local
+from liquidtests.patterns import PatternsTest

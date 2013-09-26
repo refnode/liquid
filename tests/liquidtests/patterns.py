@@ -1,4 +1,4 @@
-# Copyright 2012, refnode
+# Copyright 2012, refnode http://refnode.com
 # All Rights Reserved
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,7 +19,7 @@ import re
 import unittest
 # import third party
 # import local
-from pyliquid.patterns import *
+from liquid.patterns import *
 
 
 class PatternsTest(unittest.TestCase):

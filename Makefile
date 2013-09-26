@@ -1,10 +1,11 @@
-# Workaround Makefile for cleanup
+.PHONY: docs
 
 RM = rm -rf
+AUTHOR := $(shell git config user.name)
+EMAIL  := $(shell git config user.email)
 
-.PHONY: clean
 
-bootstrap: distclean
+bin/buildout:
 	/usr/bin/env python bootstrap.py
 	bin/buildout
 
@@ -20,13 +21,14 @@ distclean: clean
 		build/ \
 		develop-eggs/ \
 		dist/ \
-		docs/doctrees/ \
-		docs/html/ \
-		docs/make.bat \
-		docs/Makefile \
 		eggs/ \
 		parts/ \
 		src/*.egg-info/ \
 		MANIFEST \
 		.installed.cfg
+
+release: distclean
+	#rpmdev-bumpspec --comment="Initial RPM release" --userstring="$(AUTHOR) $(EMAIL)"
+	/usr/bin/env python setup.py sdist
+	/usr/bin/env python setup.py bdist_egg
 

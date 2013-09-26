@@ -1,4 +1,4 @@
-# Copyright 2011, refnode
+# Copyright 2012, refnode http://refnode.com
 # All Rights Reserved
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

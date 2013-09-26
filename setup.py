@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Copyright 2012 refnode
+# Copyright 2012, refnode - http://refnode.com
 # All Rights Reserved
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,9 +15,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-# symbols exported for 'from xyz import *'
-# __all__ = []
 
 # import std
 import os
@@ -37,18 +34,15 @@ except ImportError:
     from setuptools import setup, find_packages
 
 if sys.version_info < (2, 6):
-    print "pyliquid only supports Python 2.6 and higher"
+    print "liquid only supports Python 2.6 and higher"
     sys.exit(1)
 
 
-def get_version():
-    return '0.1'
-
 setup(
-    name='pyliquid',
-    version=get_version(),
-    description="pyliquid",
-    long_description=open('README.rst').read(),
+    name='liquid',
+    version=open('VERSION').readline().strip(),
+    description="Reimplementation of the ruby liquid template lib",
+    long_description=open('README.md').read(),
     # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
         "Development Status :: 1 - Planning",
@@ -63,12 +57,12 @@ setup(
     ],
     keywords='pyliquid',
     author='refnode',
-    author_email='refnode@gmail.com',
-    url='https://github.com/refnode/pyliquid',
+    author_email='refnode at gmail.com',
+    url='https://github.com/refnode/liquid',
     license='Apache Software License (http://www.apache.org/licenses/LICENSE-2.0)',
-    namespace_packages=['pyliquid'],
+    namespace_packages=['liquid'],
     package_dir={'': 'src'},
-    packages=find_packages('src', exclude=['ez_setup', 'examples', 'tests']),
+    packages=find_packages('src', exclude=['tests', '.gitignore']),
     include_package_data=True,
     zip_safe=False,
     install_requires=[
@@ -76,7 +70,7 @@ setup(
     ],
     entry_points = {
         "console_scripts": [
-            "pyliquid = pyliquid.tools.shell:main"
+            "liquid = liquid.tools.shell:main"
         ]
     }
 )
