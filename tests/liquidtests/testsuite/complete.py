@@ -18,3 +18,4 @@
 # import third party
 # import local
 from liquidtests.patterns import PatternsTest
+from liquidtests.lexer import LexerTest
